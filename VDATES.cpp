@@ -1,14 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-    int n;
-    cin>>n;
-    
-    for(int i=0;i<n;i++){
-        int d, l, r;
-        cin>>d>>l>>r;
-        
-        if(d >= l && d<=r){
+int func(int d, int l, int r){
+    if(d >= l && d<=r){
             cout<<"Take second dose now\n";
         }
         else if(d>r){
@@ -17,6 +10,16 @@ int main(){
         else{
             cout<<"Too Early\n";
         }
+}
+int main(){
+    int test;
+    cin>>test;
+    
+    for(int i=0;i<test;i++){
+        int d, l, r;
+        cin>>d>>l>>r;
+        
+        func(d,l,r);
         
     }
     
